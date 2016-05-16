@@ -1,0 +1,13 @@
+Reference of Code
+Step1:
+	Code: clean_data.py
+	Result: data_clean.csv
+Step2:
+	Code: target_preparation.py, get_target_csv.py
+	Result: target.csv
+Step3:
+	Code: map_interact.py, reduce_interact.py, map_name_date.py, reduce_name_date.py, map_sit.py, reduce_sit.py
+	Result: data_mapreduce.csv data_mapreduce_clean.csv
+Step4:
+	data_get_dummy_get_normalize.py
+	data_normalize.csv
