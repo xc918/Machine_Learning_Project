@@ -58,8 +58,8 @@ def load_data(path):
     return X_train, X_test, Y_train, Y_test, X_train_case, X_test_case, X_train_judge, X_test_judge
 
 
-def main():
-    X_train, X_test, Y_train, Y_test, X_train_case, X_test_case, X_train_judge, X_test_judge = load_data('data_normalize.csv')
+def main(path):
+    X_train, X_test, Y_train, Y_test, X_train_case, X_test_case, X_train_judge, X_test_judge = load_data(path)
 
     output_imp = pd.DataFrame(columns=['rf_imp','rf_name','rf_yerr','rf_case_imp','rf_case_name',
                                        'rf_case_yerr','rf_judge_imp','rf_judge_name','rf_judge_yerr'])
@@ -111,5 +111,8 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+
+    path = './0504_normalize_data.csv'
+    main(path)
+
 

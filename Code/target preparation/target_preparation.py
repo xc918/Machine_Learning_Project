@@ -144,7 +144,7 @@ def get_dissent_dummy(target):
 
 def main():
 
-    path = './cleaned_with_column.csv'
+    path = './votelevel_cleand.csv'
     data = pd.read_csv(path)
 
     target = get_dissent_judge(data)
