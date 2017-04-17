@@ -42,11 +42,11 @@
    Then we will get the .csv file for target 'target.csv'.
    
 4. MapReduce
- - Run the MapReduce code to generate the dataset we need, in a format of 'case_information + judge1's_information + judge2's_information + inter+information + target'.
+ - Run the MapReduce code locally or on Hadoop to generate the dataset we need, in a format of 'case_information + judge1's_information + judge2's_information + inter+information + target'.
     ```sh
-    cat xxx.csv | python map_interact.py | sort | python reduce_interact.py >output file
-    cat xxx.csv | python map_sit.py | sort | python reduce_sit.py >output file
-    cat xxx.csv | python map_name_date.py | sort | python reduce_name_date.py >output file
+    cat xxx.csv | python map_interact.py | sort -n | python reduce_interact.py > output1
+    cat xxx.csv | python map_sit.py | sort -n | python reduce_sit.py > output2
+    cat xxx.csv | python map_name_date.py | sort -n | python reduce_name_date.py > output3
     ```
  - Then, type in
     ```sh
